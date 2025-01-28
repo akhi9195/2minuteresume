@@ -1,0 +1,128 @@
+/*
+
+font size
+10 /  12 / 14 / 16 / 18 /20 /24 / 30 / 36 / 40 / 44 / 52 /  62 / 74 / 86 / 98
+ 
+
+spacing:
+
+-01 Font Weights
+Deafult:400
+Medium: 500
+Semi-bold:600
+Bold:700
+
+-02 Line height:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+-03 Letter Spacing
+0.5px;
+0.75px
+
+-04 Colors
+Primary: 
+Tints:: 
+
+Shade: 
+Accesnt
+gray : 
+#767676 (lightest gray allowed on #fff)
+#6f6f6f (lightest gray allowed on #fdf2e9)
+#555
+#333
+
+
+
+- 05 Shadows
+
+
+
+-06 Border Radius
+Default: 9px
+Medium: 11px
+
+
+-07 Whitespace
+
+
+Spacing systems (px)
+2 / 4/ 8 / 12 / 16 /  24 /32 / 48 / 64 / 80 / 96 / 128 
+
+*/
+
+.grid {
+  display: grid;
+}
+
+.grid--1-cols {
+  grid-template-columns: 1fr;
+}
+
+.grid--2-cols {
+  grid-template-columns: 70% 30%;
+}
+
+.grid--3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid--2-rows {
+  grid-template-columns: 70% 30%;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.grid--center-h {
+  justify-content: center;
+}
+
+.mt--2 {
+  margin-top: 2rem;
+}
+.mb--2 {
+  margin-bottom: 2rem;
+}
+
+.mr--2 {
+  margin-right: 2rem;
+}
+
+.ml--2 {
+  margin-left: 2rem;
+}
+
+.mt--1 {
+  margin-top: 1rem;
+}
+.mb--1 {
+  margin-bottom: 1rem;
+}
+
+.mr--1 {
+  margin-right: 1rem;
+}
+
+.ml--1 {
+  margin-left: 1rem;
+}
+
+.mt--3 {
+  margin-top: 3rem;
+}
+.mb--3 {
+  margin-bottom: 3rem;
+}
+
+.mr--3 {
+  margin-right: 3rem;
+}
+
+.ml--3 {
+  margin-left: 3rem;
+}

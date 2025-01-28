@@ -1,0 +1,410 @@
+/*
+
+font size
+10 /  12 / 14 / 16 / 18 /20 /24 / 30 / 36 / 40 / 44 / 52 /  62 / 74 / 86 / 98
+ 
+
+spacing:
+
+-01 Font Weights
+Deafult:400
+Medium: 500
+Semi-bold:600
+Bold:700
+
+-02 Line height:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+-03 Letter Spacing
+0.5px;
+0.75px
+
+-04 Colors
+Primary: 
+Tints:: 
+
+Shade: 
+Accesnt
+gray : 
+#767676 (lightest gray allowed on #fff)
+#6f6f6f (lightest gray allowed on #fdf2e9)
+#555
+#333
+
+
+
+- 05 Shadows
+
+
+
+-06 Border Radius
+Default: 9px
+Medium: 11px
+
+
+-07 Whitespace
+
+
+Spacing systems (px)
+2 / 4/ 8 / 12 / 16 /  24 /32 / 48 / 64 / 80 / 96 / 128 
+
+*/
+
+/********************************/
+/***** HEADER *******/
+/********************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* overflow-x: hidden;
+  scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #282727;
+  background-color: #282727;
+  letter-spacing: 1px;
+  /* text-decoration-style: none;
+  text-decoration: none; */
+  /* Works only if element is not absolutely positioned w.r.t body */
+  /* overflow-x: hidden; */
+}
+
+.content-bgc {
+  background-color: #767676;
+}
+.page {
+  box-shadow: 0 2.4rem 4.8rem rgb(0, 0, 0, 0.5);
+  background-color: #ffffff;
+
+  /* border-bottom: 10px solid #282727;*/
+  /* border-top: 10px solid #282727; */
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.header {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: #00bca3;
+  height: 14rem;
+  padding: 2rem 0 2rem 2rem;
+  grid-column: 1 / span 3;
+}
+
+.name {
+  font-size: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  /* font-weight: 700; */
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.designation {
+  font-size: 2rem;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  /* margin-bottom: 0.5rem; */
+  font-weight: 300;
+  /* color: #555; */
+}
+
+.section-header {
+  color: #00bca3;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0.4rem;
+  border-bottom: 1px solid rgb(219, 216, 216);
+}
+
+/* ************************************************* */
+/***************** Sidebar ***************************/
+/* ********************************* *****************/
+
+.section-sidebar {
+  align-self: stretch;
+  justify-self: stretch;
+  /* width: 100vw; */
+  height: 100%;
+  /* overflow: scroll; */
+  background-color: #f4f4f4;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.profile-photo-box {
+  height: 100%;
+}
+.profile-photo {
+  height: 100%;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.contact-label {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.contact-text {
+  /* font-weight: 450; */
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  color: rgb(72, 70, 70);
+}
+
+.sidebar-section {
+  margin-bottom: 3rem;
+}
+/* ************************************************* */
+/***************** Skills ***************************/
+/* ********************************* *****************/
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* margin-bottom: 0.8rem; */
+  gap: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 450;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  justify-content: left;
+}
+.skill-ratings {
+  display: flex;
+  border: none;
+  gap: 0.2rem;
+  justify-content: right;
+
+  /* border-radius: 50%; */
+}
+ion-icon {
+  background: none;
+  padding: 0;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+/* .rating-color {
+  background-color: #00bca3;
+} */
+
+.rating-color {
+  color: #00bca3;
+  background-color: #00bca3;
+  border-radius: 50%;
+}
+.rating-no-color {
+  color: #d5d6d6;
+  background-color: #d5d6d6;
+  border-radius: 50%;
+}
+
+/* ************************************************* */
+/***************** Summary ***************************/
+/* ********************************* *****************/
+
+.section-body {
+  padding-left: 2rem;
+}
+.summary {
+  margin-bottom: 4.8rem;
+}
+
+.summary-text,
+.sumaary-list,
+.list-item {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.summary-list {
+  padding-left: 2rem;
+}
+
+.list {
+  list-style: disc;
+}
+
+.list-item {
+  list-style: disc;
+}
+
+li {
+  padding-left: 1rem;
+}
+
+/* ************************************************* */
+/***************** Work History ***************************/
+/* ********************************* *****************/
+
+.section-work-history {
+  margin-bottom: 4.8rem;
+}
+.company-record {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  column-gap: 3rem;
+  margin-bottom: 2rem;
+}
+.duration {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.company-details {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+.compnay-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.compnay-address {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ************************************************* */
+/***************** Roles & responsibilities ***************************/
+/* ********************************* *****************/
+
+.section-roles {
+  margin-bottom: 4.8rem;
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  margin-left: 4rem;
+  column-gap: 3rem;
+}
+/* ************************************************* */
+/***************** Accomplishments ***************************/
+/* ********************************* *****************/
+
+.section-accomplishments {
+  margin-bottom: 4.8rem;
+}
+
+.accomplishments {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  margin-left: 4rem;
+  column-gap: 3rem;
+}
+
+/* ************************************************* */
+/***************** Education ***************************/
+/* ********************************* *****************/
+
+.section-education {
+  margin-bottom: 4.8rem;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  column-gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.education-year {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.institute-details {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+.college-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.college-address,
+.score {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ************************************************* */
+/***************** Certifications ***************************/
+/* ********************************* *****************/
+
+.section-certifications {
+  margin-bottom: 4.8rem;
+}
+
+.certifications {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  column-gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.certification-year {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.certification-name {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  padding-bottom: 4.8rem;
+}
+
+.page--2--sidebar,
+.page--3--sidebar {
+  width: 100%;
+}
+
+.page--3 {
+  border-bottom: 4px solid #767676;
+}
