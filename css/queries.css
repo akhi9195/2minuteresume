@@ -1,0 +1,283 @@
+/*font size
+10 /  12 / 14 / 16 / 18 /20 /24 / 30 / 36 / 40 / 44 / 52 /  62 / 74 / 86 / 98
+
+
+Spacing systems (px)
+2 / 4/ 8 / 12 / 16 /  24 /32 / 48 / 64 / 80 / 96 / 128 
+
+*/
+
+/* ************************************** */
+/* BELOW 700px  ( Smaller Tablets)*/
+/* 700px /16px =45 */
+/* ************************************** */
+
+@media (max-width: 45em) {
+  .duration,
+  .education-year,
+  .certification-year {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+/* ************************************** */
+/* BELOW 620 px  ( Phones)*/
+/* 620 px /16 px =38 */
+/* ************************************** */
+
+@media (max-width: 38em) {
+  /* html {
+    font-size: 50%;
+  } */
+  /* .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  } */
+
+  .duration,
+  .education-year,
+  .certification-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .section-sidebar {
+    align-self: stretch;
+    justify-self: stretch;
+    /* width: 100vw; */
+    height: 100%;
+
+    /* overflow: scroll; */
+    /* background-color: ; */
+  }
+  .resume {
+    display: none;
+  }
+}
+/* ************************************** */
+/* BELOW 544px  ( Phones)*/
+/* 544px /16px =34 */
+/* ************************************** */
+@media (max-width: 34em) {
+  .btn-mobile-nav,
+  .icon-mobile-nav {
+    z-index: 9999;
+  }
+  .name {
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+  }
+
+  .designation {
+    font-size: 1.2rem;
+  }
+
+  .section-header {
+    font-size: 1.2rem;
+  }
+
+  .contact-text {
+    /* font-weight: 450; */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .summary-text,
+  .sumaary-list,
+  .list-item {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .compnay-name {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .compnay-address {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .college-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .college-address,
+  .score {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .certification-name {
+    font-size: 1rem;
+  }
+
+  .duration,
+  .education-year,
+  .certification-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .section-sidebar {
+    align-self: stretch;
+    justify-self: stretch;
+    /* width: 100vw; */
+    height: 100%;
+
+    /* overflow: scroll; */
+    /* background-color: ; */
+  }
+}
+
+/* ************************************** */
+/* BELOW 400px  ( Phones)*/
+/* 400px /16px =25 */
+/* ************************************** */
+@media (max-width: 25em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  /* MOBILE NAVIGATION */
+  /* MOBILE */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .sticky .section-body {
+    margin-top: 16.9rem;
+  }
+
+  .sticky .section-sidebar {
+    margin-top: 16.9rem;
+  }
+
+  .btn-desktop-nav {
+    display: none;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+
+    color: #555;
+  }
+  .main-nav {
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* animation: transition */
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation, fade out */
+    transition: all 0.5s ease-in-out;
+
+    /* Hide navigation by default */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-opened .skills {
+    display: none;
+  }
+  .nav-opened {
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+    color: #555;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .contact-text {
+    overflow-wrap: break-word;
+  }
+
+  .compnay-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .compnay-address {
+    font-size: 0.7rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .college-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .college-address,
+  .score {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .certification-name {
+    font-size: 1rem;
+  }
+
+  .duration,
+  .education-year,
+  .certification-year {
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .section-header {
+    font-size: 1.2rem;
+  }
+  .contact-label {
+    font-size: 1.1rem;
+  }
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  .skill-ratings {
+    justify-content: right;
+  }
+
+  .section-sidebar {
+    margin: 0;
+    /* overflow: scroll; */
+    /* background-color: yellow; */
+  }
+}

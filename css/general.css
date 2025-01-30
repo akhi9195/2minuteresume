@@ -94,7 +94,7 @@ Spacing systems (px)
 }
 
 .ml--2 {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .mt--1 {
@@ -125,4 +125,26 @@ Spacing systems (px)
 
 .ml--3 {
   margin-left: 3rem;
+}
+
+/* .btn,
+.btn:link,
+.link:visited {
+  color: #d81717;
+  border-bottom: 1px solid transparent;
+}
+
+.btn:hover,
+.link:active {
+  color: #dd2a2a;
+  border-bottom: 1px solid transparent;
+} */
+
+*:focus {
+  outline: none;
+
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+
+  box-shadow: 0 0 0 2px rgba(244, 244, 244, 0.529);
 }

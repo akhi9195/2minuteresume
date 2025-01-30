@@ -66,7 +66,8 @@ Spacing systems (px)
 
 html {
   font-size: 62.5%;
-  /* overflow-x: hidden;
+  overflow-x: hidden;
+  /*
   scroll-behavior: smooth; */
 }
 
@@ -80,7 +81,7 @@ body {
   /* text-decoration-style: none;
   text-decoration: none; */
   /* Works only if element is not absolutely positioned w.r.t body */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .content-bgc {
@@ -90,7 +91,7 @@ body {
   box-shadow: 0 2.4rem 4.8rem rgb(0, 0, 0, 0.5);
   background-color: #ffffff;
 
-  /* border-bottom: 10px solid #282727;*/
+  border-bottom: 10px solid #282727;
   /* border-top: 10px solid #282727; */
 }
 
@@ -102,11 +103,163 @@ body {
 .header {
   /* display: flex;
   flex-direction: column; */
+  font-family: "Rubik";
   background-color: #00bca3;
-  height: 14rem;
+  height: 16rem;
   padding: 2rem 0 2rem 2rem;
   grid-column: 1 / span 3;
+  position: relative;
 }
+
+/* **************** */
+/*  MOBILE NAVIGATION */
+/* ***************** */
+
+.mobile-nav-button-row {
+  display: flex;
+  justify-content: end;
+  margin-right: 0.3rem;
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+/* MOBILE */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 2.8rem;
+  width: 2.8rem;
+  color: #ffffff;
+}
+
+.icon-desktop-nav {
+  height: 2.8rem;
+  width: 2.8rem;
+  color: #ffffff;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #767676;
+}
+
+/* **************** */
+/*  DESKTOP NAVIGATION */
+/* ***************** */
+
+.main-nav {
+  opacity: 0;
+  transform: translateX(20%);
+  transition: all 0.9s ease-in-out;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* maintain fixed height to avoid name moving down issue */
+}
+
+.nav-desktop-open .main-nav {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 0.9s ease-in-out;
+}
+
+.desktop-nav-button-row {
+  display: flex;
+  justify-content: end;
+  margin-right: 0.3rem;
+}
+
+.btn-desktop-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-desktop-nav[name="chevron-back-outline"] {
+  display: none;
+}
+
+.nav-desktop-open .icon-desktop-nav[name="caret-back-outline"] {
+  display: none;
+}
+
+.nav-desktop-open .icon-desktop-nav[name="chevron-back-outline"] {
+  display: block;
+}
+
+/*(***********  END */
+
+/* .menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expand {
+
+}
+
+.hide-menu-list {
+  position: absolute;
+  transform: translateX(20%);
+  transition: all 0.5s ease-in;
+  opacity: 0;
+}
+
+.show-menu-list {
+  transform: translateX(-20%);
+  transition: all 0.5s ease-out;
+  opacity: 1;
+}
+
+.expand .icon-desktop-nav[name="caret-back-outline"] {
+  display: block;
+}
+
+.expand .icon-desktop-nav[name="chevron-back-outline"] {
+  display: none;
+}
+
+.btn-desktop-nav {
+  color: #ffffff;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.icon-desktop-nav[name="caret-back-outline"] {
+  display: none;
+} */
 
 .name {
   font-size: 3rem;
@@ -127,16 +280,6 @@ body {
   font-weight: 300;
   /* color: #555; */
 }
-
-.section-header {
-  color: #00bca3;
-  font-size: 2rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 0.4rem;
-  border-bottom: 1px solid rgb(219, 216, 216);
-}
-
 /* ************************************************* */
 /***************** Sidebar ***************************/
 /* ********************************* *****************/
@@ -146,6 +289,7 @@ body {
   justify-self: stretch;
   /* width: 100vw; */
   height: 100%;
+
   /* overflow: scroll; */
   background-color: #f4f4f4;
   margin: 0 auto;
@@ -161,6 +305,14 @@ body {
   margin-top: 0.5rem;
 }
 
+.section-header {
+  color: #00bca3;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0.4rem;
+  border-bottom: 1px solid rgb(219, 216, 216);
+}
 .contact-label {
   font-weight: 700;
   font-size: 1.4rem;
@@ -407,4 +559,36 @@ li {
 
 .page--3 {
   border-bottom: 4px solid #767676;
+}
+.page--3--sidebar {
+  position: relative;
+}
+.go-up {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.icon-go-up {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #00bca3;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 70rem;
+  z-index: 9;
+  background-color: rgba(0, 188, 163, 0.9);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
+}
+
+.sticky .section-body {
+  margin-top: 16.9rem;
+}
+
+.sticky .section-sidebar {
+  margin-top: 16.9rem;
 }

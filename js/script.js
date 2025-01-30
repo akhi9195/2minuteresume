@@ -1,30 +1,11 @@
 ///////////////////////////////////////////////////////////
 const myName = "Akhilesh Bashettiwar";
 
-const h1 = document.querySelector(".heading-primary");
-console.log(h1);
-
-h1.addEventListeenr("click", function () {
-  h1.textContent = myName;
-  h1.style.backgroundColor = "red";
-  h1.style.padding = "5rem";
-});
-
-function myFunction() {
-  // h1.textContent = myName;
-  // h1.style.backgroundColor = "red";
-  // h1.style.padding = "5rem";
-}
-
-//set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
-
 // Mobile naviagtion
 
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const HeaderEl = document.querySelector(".header");
+const skillRatingsEl = document.querySelector(".section-skills");
 
 // btnNavEl.addEventListeenr("click", function () {
 //   HeaderEl.classList.toggle("nav-open");
@@ -33,118 +14,51 @@ const HeaderEl = document.querySelector(".header");
 function clickMenu() {
   console.log("click Menu....");
   HeaderEl.classList.toggle("nav-open");
+  skillRatingsEl.classList.toggle("nav-opened");
+  document.body.classList.remove("sticky");
+}
+
+/////////////// Desktop Menu Hide & Show
+
+const menuRowEl = document.querySelector(".menu-row");
+const mainnNavEl = document.querySelector(".main-nav");
+
+// btnNavEl.addEventListeenr("click", function () {
+//   HeaderEl.classList.toggle("nav-open");
+// });
+
+function clickDesktopMenu() {
+  console.log("click Desktop Menu....");
+  menuRowEl.classList.toggle("nav-desktop-open");
+  // HeaderEl.classList.toggle("");
+  // mainnNavEl.classList.toggle("hide-menu-list");
 }
 
 ///////////////////////////////////////////////////////////
 //Smooth scrolling animation
 
-const allLinks = document.querySelectorAll("a:link");
-console.log(allLinks);
-
-allLinks.forEach(function (link) {
-  //not working
-  // link.addEventListeenr("click", function (e) {
-  //   console.log(e);
-  //   e.preventDefault();
-  // });
-});
-
 /////////////////////////
-
 //STICKY NAVIGATION
 
-const sectionHeroEl = document.querySelector(".section-hero");
+const sectionWorkEl = document.querySelector(".section-work-history");
 //1st param: null (means in side view port)
 //2nd param:root
 //root margin
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    if (!ent.isIntersecting) {
-      document.body.classList.add("sticky");
-    }
-    if (ent.isIntersecting) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    //In tthe viewport
-    root: null,
-    thershold: 0,
-    rootMargin: "-80px",
-  }
-);
-obs.observe(sectionHeroEl);
-
-///////////////////////////////////////////////////////////
-// Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
-
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
-
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
-
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
-}
-checkFlexGap();
-
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
-
-/*
-.no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
-}
-
-.no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
-}
-
-.no-flexbox-gap .list-icon:not(:last-child) {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .delivered-faces {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .meal-attribute:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.no-flexbox-gap .meal-icon {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .footer-row div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-
-.no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
-}
-
-.no-flexbox-gap .footer-nav li:not(:last-child) {
-  margin-bottom: 2.4rem;
-}
-
-@media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
-  }
-}
-
-@media (max-width: 59em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4.8rem;
-  }
-}
-*/
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+//     if (!ent.isIntersecting) {
+//       document.querySelector(".header").classList.add("sticky");
+//     }
+//     if (ent.isIntersecting) {
+//       document.querySelector(".header").classList.remove("sticky");
+//     }
+//   },
+//   {
+//     //In tthe viewport
+//     root: null,
+//     thershold: 0,
+//     rootMargin: "-160px",
+//   }
+// );
+// obs.observe(sectionWorkEl);

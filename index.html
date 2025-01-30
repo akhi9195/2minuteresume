@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Akhilesh Bashettiwar &mdash; Profile</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/general.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,9 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet" -->
+      rel="stylesheet"
+      --
     />
 
     <!-- <link
@@ -31,10 +35,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
-    <div class="resume">
-      <button id="download-pdf">Download PDF</button>
-    </div>
-
     <div id="content" class="content-bgc">
       <!-- PAGE 1 -->
       <div class="page container">
@@ -42,6 +42,62 @@
           <!-- <section class="containera"> -->
           <div class="grid grid--2-cols grid--2-rows">
             <header class="header">
+              <div class="menu-row">
+                <div class="resume">
+                  <button id="download-pdf">
+                    <ion-icon name="download-outline"></ion-icon>
+                  </button>
+                </div>
+                <nav class="main-nav">
+                  <ul class="main-nav-list">
+                    <li><a href="#skills" class="main-nav-link">Skills</a></li>
+                    <li>
+                      <a href="#work" class="main-nav-link">Work History</a>
+                    </li>
+                    <li>
+                      <a href="#roles" class="main-nav-link">Roles</a>
+                    </li>
+                    <li>
+                      <a href="#accomplishments" class="main-nav-link"
+                        >Accomplishments</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#education" class="main-nav-link">Education</a>
+                    </li>
+                    <li>
+                      <a href="#certifications" class="main-nav-link"
+                        >Certifications</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="desktop-nav-button-row">
+                  <button class="btn-desktop-nav" onclick="clickDesktopMenu()">
+                    <ion-icon
+                      class="icon-desktop-nav"
+                      name="chevron-back-outline"
+                    ></ion-icon>
+                    <ion-icon
+                      class="icon-desktop-nav"
+                      name="caret-back-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="mobile-nav-button-row">
+                <button class="btn-mobile-nav" onclick="clickMenu()">
+                  <ion-icon
+                    class="icon-mobile-nav"
+                    name="menu-outline"
+                  ></ion-icon>
+                  <ion-icon
+                    class="icon-mobile-nav"
+                    name="close-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+
               <h1 class="name">Akhilesh Bashettiwar</h1>
               <h3 class="designation">Sr Softwar QA Engineer</h3>
             </header>
@@ -143,10 +199,10 @@
                   <p class="contact-label">Phone</p>
                   <p class="phone contact-text">+91 99088 68821</p>
                   <p class="contact-label">Email</p>
-                  <p class="phone contact-text">akhi9195@gmail.com</p>
+                  <p class="email contact-text">akhi9195@gmail.com</p>
                 </div>
                 <div class="sidebar-section section-skills">
-                  <h3 class="section-header">Skills</h3>
+                  <h3 class="section-header" id="skills">Skills</h3>
                   <div class="skills">
                     <div class="skill">
                       <p class="skill-name">Java</p>
@@ -346,7 +402,7 @@
           <div class="grid grid--2-cols grid--2-rows">
             <section class="section-body">
               <!-- Work History -->
-              <section class="section-work-history">
+              <section class="section-work-history" id="work">
                 <div class="work-history mt--3 mt--1">
                   <div class="company-record mt--2">
                     <p class="duration">2021-03 - 2022-10</p>
@@ -391,7 +447,7 @@
               </section>
 
               <!-- Roles & responsibilities -->
-              <section class="section-roles">
+              <section class="section-roles" id="roles">
                 <h3 class="section-header">
                   Roles and Responsibilities across my experience
                 </h3>
@@ -616,7 +672,7 @@
                 </div>
               </section>
               <!-- Accomplishments -->
-              <section class="section-accomplishments">
+              <section class="section-accomplishments" id="accomplishments">
                 <h3 class="section-header">Accomplishments</h3>
                 <div class="accomplishments">
                   <p></p>
@@ -640,7 +696,7 @@
               </section>
 
               <!-- Education -->
-              <section class="section-education">
+              <section class="section-education" id="education">
                 <h3 class="section-header">Education</h3>
                 <div class="education">
                   <p class="education-year">2007-06 - 2011-05</p>
@@ -656,7 +712,7 @@
               </section>
 
               <!-- Certifications -->
-              <section class="section-certifications">
+              <section class="section-certifications" id="certifications">
                 <h3 class="section-header">Certifications</h3>
                 <div class="certifications">
                   <p class="certification-year">2014-07</p>
@@ -665,7 +721,17 @@
               </section>
             </section>
             <section class="section-sidebar page--3--sidebar">
-              <div class="sidebar-details"></div>
+              <div class="sidebar-details">
+                <div class="go-up">
+                  <a href="#"
+                    ><ion-icon
+                      class="icon-go-up"
+                      name="caret-up-outline"
+                      href="#"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
             </section>
           </div>
         </main>
@@ -680,6 +746,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="js/script.js"></script>
     <script>
       document.getElementById("download-pdf").addEventListener("click", () => {
         const element = document.getElementById("content");
@@ -696,6 +763,30 @@
         };
 
         html2pdf().set(options).from(element).save();
+      });
+
+      const headerEl2 = document.querySelector(".header");
+      const skillRatingsEl2 = document.querySelector(".section-skills");
+
+      // Smooth Scrolliong
+      const allLinks = document.querySelectorAll("a:link");
+      allLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          console.log(e);
+          e.preventDefault();
+          const href = link.getAttribute("href");
+          if (href === "#") window.scrollTo({ top: 0, behavior: "smooth" });
+
+          if (href !== "#" && href.startsWith("#")) {
+            const sectionEl = document.querySelector(href);
+            sectionEl.scrollIntoView({ behavior: "smooth" });
+          }
+
+          if (link.classList.contains("main-nav-link")) {
+            headerEl2.classList.toggle("nav-open");
+            skillRatingsEl2.classList.toggle("nav-opened");
+          }
+        });
       });
     </script>
   </body>
